@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Tobi - Developer Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: rgb(23, 23, 148);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            height: fit-content;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: brown;
+        }
+
+        section {
+            padding: 60px 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+
+        .skill {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #e7f3fe;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: scale(1.05);
+        }
+
+        .project {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #e7f3fe;
+            border-left: 5px solid #2196F3;
+            transition: transform 0.3s ease;
+        }
+
+        .project:hover {
+            transform: scale(1.02);
+        }
+
+        .testimonial {
+            background-color: #f9f9f9;
+            border-left: 5px solid #4CAF50;
+            padding: 15px;
+            margin: 20px 0;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial:hover {
+            transform: scale(1.02);
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+        .blog {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #e7f3fe;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .blog:hover {
+            transform: scale(1.02);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            color: #4CAF50;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .social-links a:hover {
+            color: #005f73;
+        }
+        table{
+            padding-left:500px;
+        }
+        #dev{
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <table>
+            <tr>
+                <td><img src="Dev Tobi.jpeg" alt="" style="border-radius: 90px;"></td>
+                <td>
+                    <h1 id="dev">Dev Tobi</h1>
+
+                </td>
+            </tr>
+        </table>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Dev Tobi, a passionate developer with a love for creating innovative web applications. I specialize in front-end development and have experience with various technologies. My goal is to build user-friendly and efficient solutions that enhance the user experience.</p>
+        <p>I have a background in computer science and have worked on numerous projects that have honed my skills in problem-solving and critical thinking. I enjoy collaborating with teams and believe that great ideas come from diverse perspectives.</p>
+        <p>In my free time, I love to explore new technologies, contribute to open-source projects, and share my knowledge through blogging and mentoring. I am always eager to learn and grow in this ever-evolving field.</p>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <p>Here are some of the technologies and tools I am proficient in:</p>
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">Express.js</div>
+        <div class="skill">MongoDB</div>
+        <div class="skill">Git & GitHub</div>
+        <div class="skill">Responsive Design</div>
+        <div class="skill">UI/UX Design</div>
+        <div class="skill">TypeScript</div>
+        <div class="skill">GraphQL</div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <p>Here are some of the projects I've worked on:</p>
+        <div class="project">
+            <h3>Project 1: Portfolio Website</h3>
+            <p>A personal portfolio website to showcase my skills and projects. Built with HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2: E-commerce Platform</h3>
+            <p>An online store built with React and Node.js, featuring a user-friendly interface and secure payment processing.</p>
+        </div>
+        <div class="project">
+            <h3>Project 3: Blogging Platform</h3>
+            <p>A blogging platform where users can create and share their articles. Implemented with a RESTful API using Express.js and MongoDB.</p>
+        </div>
+        <div class="project">
+            <h3>Project 4: Task Management App</h3>
+            <p>A task management application that allows users to create, update, and delete tasks. Built with React and Firebase for real-time data synchronization.</p>
+        </div>
+        <div class="project">
+            <h3>Project 5: Weather App</h3>
+            <p>A weather forecasting application that provides real-time weather updates using a third-party API. Developed with HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="project">
+            <h3>Project 6: Chat Application</h3>
+            <p>A real-time chat application built with Socket.io and Node.js, allowing users to communicate seamlessly.</p>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+            <p>"Dev Tobi is an exceptional developer. His attention to detail and commitment to quality are unmatched!" - Daniel Smith</p>
+        </div>
+        <div class="testimonial">
+            <p>"Working with Tobi was a fantastic experience. He delivered on time and exceeded our expectations!" - Lateef</p>
+        </div>
+        <div class="testimonial">
+            <p>"Tobi's skills in front-end development transformed our project. Highly recommend!" - Tolu </p>
+        </div>
+    </section>
+
+    <section id="blog">
+        <h2>Blog</h2>
+        <p>Check out my latest blog posts:</p>
+        <div class="blog">
+            <h3>Post 1: The Future of Web Development</h3>
+            <p>In this post, I discuss the emerging trends in web development and what they mean for developers.</p>
+        </div>
+        <div class="blog">
+            <h3>Post 2: Tips for Learning JavaScript</h3>
+            <p>Here are some effective strategies for mastering JavaScript and becoming a proficient developer.</p>
+        </div>
+        <div class="blog">
+            <h3>Post 3: Understanding Responsive Design</h3>
+            <p>This article covers the principles of responsive design and how to implement them in your projects.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, feel free to reach out via email at <a href="mailto:devtobi41@gmail.com">devtobi41@gmail.com</a>.</p>
+        <p>You can also connect with me on social media:</p>
+        <div class="social-links">
+            <a href="https://github.com/Dev-Tobi41" target="_blank">GitHub</a>
+            <a href="https://www.youtube.com/@Dev_Ty1.0" target="_blank">Youtube</a>
+            <a href="tel:+2348166359947">Call Me</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Dev Tobi. All rights reserved.</p>
+    </footer>
+</body>
+</html>
