@@ -5,6 +5,23 @@ import { BranchSelector } from "@/components/branch-selector"
 import { TrustProtocol } from "@/components/trust-protocol"
 import { WhatsAppConcierge } from "@/components/whatsapp-concierge"
 import { Laptop, Smartphone, Phone, MapPin, Clock } from "lucide-react"
+// Replace with your Strapi URL and API Token
+const STRAPI_URL = "https://onrender.com";
+const STRAPI_TOKEN = "your_api_token_here";
+
+async function getProducts() {
+  const res = await fetch(`${STRAPI_URL}/api/products?populate=*`, {
+    headers: {
+      Authorization: `Bearer ${STRAPI_TOKEN}`,
+    },
+    next: { revalidate: 60 } // Updates your site every 60 seconds
+  });
+
+  if (!res.ok) throw new Error("Failed to fetch products");
+  const result = await res.json();
+  return result.data;
+}
+
 
 const laptops = [
   {
