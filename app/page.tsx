@@ -21,6 +21,29 @@ async function getProducts() {
   const result = await res.json();
   return result.data;
 }
+export default async function ProductGallery() {
+  const products = await getProducts();
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-10">
+      {products.map((product: any) => (
+        <div key={product.id} className="border rounded-lg overflow-hidden shadow-sm">
+          {/* Display the Image from Strapi */}
+          <img
+            src={`${STRAPI_URL}${product.attributes.image.data.attributes.url}`}
+            alt={product.attributes.name}
+            className="w-full h-48 object-cover"
+          />
+          <div className="p-4">
+            <h2 className="text-xl font-bold">{product.attributes.name}</h2>
+            <p className="text-green-600 font-semibold">${product.attributes.price}</p>
+            <p className="text-gray-600 text-sm mt-2">{product.attributes.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 
 const laptops = [
